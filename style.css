@@ -1,13 +1,15 @@
 /* General CSS */
 :root{
-
+ --primary:white;
+ --secondary:black
 }
 *{
     box-sizing: border-box;
-    font-family: Roboto sans-serif;
+    font-family: Roboto, sans-serif;
 }
 body{
     margin: 0;
+   
 }
 a{
     text-decoration: none;
@@ -29,4 +31,155 @@ li{
     justify-content: space-between;
     align-items: center;
 }
+.grid{
+    display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 1rem;
+}
 /* Stripe Project CSS */
+
+.wrapper{
+   
+}
+.header{
+  
+   
+}
+
+.logo{
+    font-size: 2rem;
+     color: var(--primary)
+}
+.services,.btn{
+   font-size: 1.2rem;
+
+  
+}
+.services a{
+color: var(--primary);
+}
+.services{
+    gap:2rem;
+}
+.btn{
+    color: var(--primary);
+    background-color: var(--secondary);
+    border: none;
+    margin-right:2rem;
+    border-radius: 10px;
+    padding: 0.25rem 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+.btn:hover{
+   opacity: 0.5;
+}
+
+.wrapper{
+    background: url('./images/background.svg') no-repeat ;
+    background-size: contain ;
+    background-position: top;
+    height: 100vh;
+}
+.ham{
+    display: none;
+    margin-top: 2rem;
+    cursor: pointer;
+    padding: 0.5rem 0.8rem;
+    border-radius: 20px;
+    color: var(--primary);
+    background-color: var(--secondary);
+
+}
+.hero{
+    margin-top: 3rem;
+    position: relative;
+}
+
+.hero .heading{
+    font-size: 3rem;
+}
+.hero .para{
+    margin: 1rem 0;
+    font-size: 1rem;
+    font-weight: 100;
+}
+.hero .start-btn{
+    width: 100px;
+   font-size: 1rem;
+   text-align: center;
+
+}
+.hero .phone{
+    position:absolute;
+    top:-2.8rem;
+    right: 3rem;
+}
+
+.aside{
+    display: none;
+    width: 85%;
+    height: 100vh;
+    position: absolute;
+    top:1rem;
+    left: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    
+
+}
+
+
+.xmark{
+    position: absolute;
+    padding: 0.5rem 0.5rem;
+    font-size: 2rem;
+    cursor: pointer;
+    right: 0.2rem;
+    top:0.5rem;
+    color: var(--secondary);
+  
+}
+.sub-links{
+    margin-top: 4rem;
+    padding: 0.5rem 2rem;
+    
+}
+
+/* inside Xmark */
+.level{
+    font-size: 1.2rem;
+    margin: 2rem 0;
+    font-weight: 600;
+   
+}
+.level-container{
+    margin-top: 0.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 1rem;
+    font-weight: 400;
+   
+}
+
+
+@media (max-width:600px) {
+    .ham{
+    display: block;
+}
+    .hero .phone{
+        display: none;
+    }
+    .middle-section{
+        display: none;
+
+    }
+    .sign-in{
+        display: none;
+    }
+    .show{
+    display: block;
+}
+
+}
