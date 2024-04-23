@@ -59,7 +59,7 @@ li{
 color: var(--primary);
 }
 .services{
-    gap:2rem;
+    gap:5rem;
 }
 .btn{
     color: var(--primary);
@@ -160,9 +160,66 @@ color: var(--primary);
     grid-template-columns: 1fr 1fr;
     font-size: 1rem;
     font-weight: 400;
+    row-gap: 0.5rem;
    
 }
+.level-item{
+    cursor: pointer;
+    font-size:1.1rem ;
+    font-weight: 300;
+    transition: all 0.15s linear;
+}
+.level-item:hover{
+    transform: scale(1.1);
+    font-weight: 400;
+}
 
+/* for links on large screen view  */
+
+
+.link-container{
+    display: grid;
+}
+.col2{
+    grid-template-columns: 1fr 1fr;
+}
+.col3{
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+/* mouseover effect content */
+.subnav{
+    background-color: white;
+    position: absolute;
+    top:3rem;
+    left:50%;
+    padding: 1rem;
+    border-radius: 10px;
+}
+/* arrow head */
+ .subnav::before{
+        content: '';
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent; 
+        border-right: 10px solid transparent; 
+        border-bottom: 10px solid red; 
+        position: absolute;
+        top:-10px;
+        left: 50%;
+        transform: translateX(-50%);
+
+ }
+
+
+@media (max-width:900px) {
+   .services{
+    gap:2rem;
+} .sign-in{
+    margin-left:1rem;
+}
+}
 
 @media (max-width:600px) {
     .ham{

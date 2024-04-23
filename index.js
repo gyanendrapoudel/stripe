@@ -1,17 +1,11 @@
 import {data} from './data.js'
-console.log(data)
+
 const services = document.querySelectorAll('.services li')
-
-
-
 const ham = document.querySelector('.ham');
 const aside = document.querySelector('.aside');
 const xmark = document.querySelector('.xmark')
 const subLinks = document.querySelector('.sub-links')
 
-
-
-console.log(subLinks)
 
 ham.addEventListener('click',()=>{
    aside.classList.add('show')
@@ -29,7 +23,7 @@ subLinks.innerHTML=`${data.map((item)=>{
       .map((link) => {
         return `
         
-            <div class="level-item">
+            <div class="level-item ">
              <span>${link.icon}</span>
              <span>${link.linksName}</span>
              </div>
@@ -44,3 +38,11 @@ subLinks.innerHTML=`${data.map((item)=>{
 }).join('')}`
 
 console.log(subLinks.innerHTML)
+
+
+// mouse over effect
+
+ 
+
+
+ 
