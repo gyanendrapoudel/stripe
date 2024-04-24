@@ -183,10 +183,8 @@ color: var(--primary);
     display: grid;
 }
 .col2{
+    display: grid;
     grid-template-columns: 1fr 1fr;
-}
-.col3{
-    grid-template-columns: 1fr 1fr 1fr;
 }
 
 
@@ -194,11 +192,13 @@ color: var(--primary);
 .subnav{
     background-color: white;
     position: absolute;
+    /* left and top property is controlling by JS*/
     top:3rem;
-    left:50%;
+    left:40%;
     padding: 1rem;
     border-radius: 10px;
     display: none;
+   
 }
 /* arrow head */
  .subnav::before{
@@ -210,7 +210,7 @@ color: var(--primary);
         border-bottom: 10px solid white; 
         position: absolute;
         top:-10px;
-        left: 50%;
+        left: 40%;
         transform: translateX(-50%);
 
  }
@@ -219,6 +219,11 @@ color: var(--primary);
     z-index: 1;
  }
 
+.col3{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:1rem
+}
 
 @media (max-width:900px) {
    .services{
