@@ -120,7 +120,7 @@ services.forEach((service)=>{
 
 hero.addEventListener('mouseover',function(){
     subnav.classList.remove('showSubmenu')
-    console.log('hello from hero')
+    
 })
 
 
@@ -129,7 +129,7 @@ hero.addEventListener('mouseover',function(){
 header.addEventListener('mouseover',function(e){
   if (!e.target.classList.contains("js-service")) {
        subnav.classList.remove('showSubmenu')
-         console.log('hello from heder')
+         
   }
 
 })
