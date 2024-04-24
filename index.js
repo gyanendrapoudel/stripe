@@ -87,16 +87,23 @@ services.forEach((service)=>{
                   <span>${link.linksName}</span>
                 </div>`
       }).join('')
-    if(links.length===2){
+     
+
+      if(links.length===2){
       subnav.classList.add('col2')
     }
+
      if (links.length === 3) {
+         if(subnav.classList.contains('col2')){
+          subnav.classList.remove('col2');
+         }
        subnav.classList.add('col3')
      }
+    
     subnav.innerHTML = subnavHTML
  
 
-    }else{
+    } else{
       // if there is pricing  and it does not have other links then this works
      subnav.classList.remove('showSubmenu')
     }
@@ -109,23 +116,20 @@ services.forEach((service)=>{
 })
 
 
-
-
-
-
 // removing mouse over effect on hero section 
 
 hero.addEventListener('mouseover',function(){
     subnav.classList.remove('showSubmenu')
+    console.log('hello from hero')
 })
 
 
 
 // removing mouse over effect on header section expect on link of nav
 header.addEventListener('mouseover',function(e){
-
   if (!e.target.classList.contains("js-service")) {
        subnav.classList.remove('showSubmenu')
+         console.log('hello from heder')
   }
 
 })

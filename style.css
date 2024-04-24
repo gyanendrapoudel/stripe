@@ -182,10 +182,7 @@ color: var(--primary);
 .link-container{
     display: grid;
 }
-.col2{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
+
 
 
 /* mouseover effect content */
@@ -215,16 +212,20 @@ color: var(--primary);
 
  }
  .showSubmenu{
-    display: block;
+    display: grid;
     z-index: 1;
  }
 
 .col3{
-    display: grid;
+
     grid-template-columns: 1fr 1fr 1fr;
     gap:1rem
 }
-
+.col2{
+   
+    grid-template-columns: 1fr 1fr;
+    gap:1rem;
+}
 @media (max-width:900px) {
    .services{
     gap:2rem;
