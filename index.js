@@ -1,13 +1,16 @@
 import { data } from './data.js'
-console.log(data)
+
 const services = document.querySelectorAll('.services li')
 
 const ham = document.querySelector('.ham')
 const aside = document.querySelector('.aside')
 const xmark = document.querySelector('.xmark')
 const subLinks = document.querySelector('.sub-links')
+const subnav = document.querySelector('.subnav')
+const header = document.querySelector('.header')
+const hero = document.querySelector('.hero')
 
-console.log(subLinks)
+
 
 ham.addEventListener('click', () => {
   aside.classList.add('show')
@@ -15,6 +18,8 @@ ham.addEventListener('click', () => {
 xmark.addEventListener('click', () => {
   aside.classList.remove('show')
 })
+
+//  Creating HTML for content inside hamburger menu 
 
 subLinks.innerHTML = `${data
   .map((item) => {
@@ -40,4 +45,32 @@ subLinks.innerHTML = `${data
   })
   .join('')}`
 
-console.log(subLinks.innerHTML)
+// console.log(subLinks.innerHTML)
+
+//  mouseover effect on main menu 
+
+// console.log(services)
+services.forEach((service)=>{
+  // console.log(service)
+  service.addEventListener('mouseover',function(){
+    subnav.classList.add('showSubmenu')
+  })
+})
+
+
+
+// removing mouse over effect on hero section 
+
+hero.addEventListener('mouseover',function(){
+    subnav.classList.remove('showSubmenu')
+})
+
+
+
+// removing mouse over effect on header section expect on link of nav
+header.addEventListener('mouseover',function(e){
+  if (!e.target.classList.contains("js-service")) {
+       subnav.classList.remove('showSubmenu')
+  }
+})
+

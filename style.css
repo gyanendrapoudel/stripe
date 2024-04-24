@@ -125,7 +125,8 @@ color: var(--primary);
     top:1rem;
     left: 2rem;
     background-color: white;
-    border-radius: 10px;
+    border-radius: 10px; 
+    z-index: 2;
     
 
 }
@@ -152,6 +153,7 @@ color: var(--primary);
     font-size: 1.2rem;
     margin: 2rem 0;
     font-weight: 600;
+  
    
 }
 .level-container{
@@ -214,6 +216,7 @@ color: var(--primary);
  }
  .showSubmenu{
     display: block;
+    z-index: 1;
  }
 
 
